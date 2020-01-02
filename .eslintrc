@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "react-app",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "plugins": ["prettier"],
+  "rules": {
+    "semi": ["error", "never"],
+    "jsx-a11y/href-no-hash": 0
+  }
+}

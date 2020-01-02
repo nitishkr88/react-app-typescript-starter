@@ -1,0 +1,40 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": {
+          "browsers": ["last 2 versions", "Edge >= 12", "Explorer >= 10"]
+        }
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-syntax-object-rest-spread",
+        "lodash"
+      ]
+    },
+    "production": {
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-syntax-object-rest-spread",
+        "lodash"
+      ]
+    },
+    "test": {
+      "plugins": [
+        "@babel/plugin-proposal-class-properties",
+        "@babel/plugin-proposal-export-default-from",
+        "@babel/plugin-syntax-object-rest-spread",
+        "lodash"
+      ]
+    }
+  }
+}
