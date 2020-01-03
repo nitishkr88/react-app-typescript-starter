@@ -2,8 +2,7 @@ const express = require('express')
 const { resolve } = require('path')
 
 const logger = require('./logger')
-const argv = require('./argv')
-const port = require('./port')
+const { env } = require('./env')
 const setup = require('./middlewares/frontendMiddleware')
 
 const isDev = process.env.NODE_ENV !== 'production'
@@ -20,9 +19,8 @@ setup(app, {
 })
 
 // get the intended host and port number, use localhost and port 3000 if not provided
-const customHost = argv.host || process.env.host
-const host = customHost || null // let http.Server use its default IPv6/4 host
-const prettyHost = customHost || 'localhost'
+const host = env.app.host || 'localhost'
+const port = env.app.port || 3000
 
 // use the gzipped bundle
 app.get('*.js', (req, res, next) => {
@@ -37,5 +35,5 @@ app.listen(port, host, err => {
     return logger.error(err.message)
   }
 
-  logger.appStarted(port, prettyHost)
+  logger.appStarted(port, host)
 })
