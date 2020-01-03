@@ -1,0 +1,10 @@
+.vscode
+node_modules
+.editorconfig
+.env.example
+.gitignore
+.travis.yml
+appveyor.yml
+icon.png
+LICENSE
+README.md
