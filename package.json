@@ -43,7 +43,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:tslint"
+      "pre-commit": "npm run lint"
     }
   },
   "dependencies": {
