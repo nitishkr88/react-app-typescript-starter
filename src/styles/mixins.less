@@ -1,0 +1,122 @@
+// Font styling mixin - without color defined
+.base-font-styling(@font-size; @font-weight; @line-height) {
+  font-size: @font-size;
+  font-weight: @font-weight;
+  line-height: @line-height;
+}
+
+// Font styling mixin - with color defined
+.font-styling(@font-size; @font-weight; @line-height; @color: @font-color-1) {
+  font-size: @font-size;
+  font-weight: @font-weight;
+  line-height: @line-height;
+  color: @color;
+}
+
+.tag-font-styling(@color: @tag-font-color-white; @font-weight: @tag-font-weight-white;) {
+  .font-styling(@tag-font-size, @font-weight, @tag-line-height, @color);
+}
+
+// Overflow behavior that adds ellipsis to truncate
+// long text (applies only to single line)
+.text-overflow-ellipsis() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Truncates text when length is longer than 100% of parent. Must be single line.
+.text-truncate() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// Center element inside a wrapper element.
+.flex-box-center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.paragraph-font() {
+  .font-styling(14px, @font-weight-regular, 22px);
+}
+
+.paragraph-white-font() {
+  .font-styling(14px, @font-weight-regular, 22px, @white);
+}
+
+.label-font() {
+  .font-styling(
+    @title-h4-font-size,
+    @title-h4-font-weight,
+    @title-h4-line-height,
+    @title-h4-font-color
+  );
+}
+
+.link-font() {
+  .font-styling(14px, @font-weight-medium, 10px, @blue-1);
+}
+
+.monospace-font() {
+  font-family: @monospace-font-family;
+  font-size: @default-monospace-font-size;
+  color: @font-color-1;
+  letter-spacing: 0;
+  line-height: 10px;
+}
+
+.navigation-dark-font() {
+  .font-styling(14px, @font-weight-medium, 10px, @font-color-1);
+}
+
+.navigation-blue-font() {
+  .font-styling(14px, @font-weight-medium, 10px, @blue-1);
+}
+
+.navigation-gray-font() {
+  .font-styling(14px, @font-weight-medium, 10px, @font-color-2);
+}
+
+.navigation-white-font() {
+  .font-styling(14px, @font-weight-medium, 10px, @white);
+}
+
+.size(@size) {
+  width: @size;
+  height: @size;
+}
+
+.clearfix() {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: ' ';
+  clear: both;
+  height: 0;
+}
+
+// Text overflow
+// Requires inline-block or block for proper styling
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hideScrollBar() {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  &::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    background: transparent; /* make scrollbar transparent */
+  }
+}

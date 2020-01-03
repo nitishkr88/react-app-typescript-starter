@@ -1,0 +1,87 @@
+/* light */
+@font-face {
+  font-weight: 300;
+  font-style: normal;
+  font-family: 'metropolis';
+  src: url('./assets/fonts/metropolis-light-webfont.woff2'),
+    url('./assets/fonts/metropolis-light-webfont.woff');
+}
+
+/* regular */
+@font-face {
+  font-family: 'metropolis';
+  src: url('./assets/fonts/metropolis-regular-webfont.woff2') format('woff2'),
+    url('./assets/fonts/metropolis-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* medium */
+@font-face {
+  font-family: 'metropolis';
+  src: url('./assets/fonts/metropolis-medium-webfont.woff2') format('woff2'),
+    url('./assets/fonts/metropolis-medium-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+/* semibold */
+@font-face {
+  font-family: 'metropolis';
+  src: url('./assets/fonts/metropolis-semibold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/metropolis-semibold-webfont.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* bold */
+@font-face {
+  font-family: 'metropolis';
+  src: url('./assets/fonts/metropolis-bold-webfont.woff2') format('woff2'),
+    url('./assets/fonts/metropolis-bold-webfont.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+font-family: 'metropolis', Helvetica Neue, Helvetica, Arial, sans-serif;
+-webkit-font-smoothing: antialiased;
+
+h1&,
+h1 {
+  .font-styling(
+    @title-h1-font-size,
+    @title-h1-font-weight,
+    @title-h1-line-height,
+    @title-font-color
+  );
+}
+
+h2&,
+h2 {
+  .font-styling(
+    @title-h2-font-size,
+    @title-h2-font-weight,
+    @title-h2-line-height,
+    @title-font-color
+  );
+}
+
+h3&,
+h3 {
+  .font-styling(
+    @title-h3-font-size,
+    @title-h3-font-weight,
+    @title-h3-line-height,
+    @title-font-color
+  );
+}
+
+h4&,
+h4 {
+  .font-styling(
+    @title-h4-font-size,
+    @title-h4-font-weight,
+    @title-h4-line-height,
+    @title-h4-font-color
+  );
+}
